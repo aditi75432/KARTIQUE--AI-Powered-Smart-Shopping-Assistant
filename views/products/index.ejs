@@ -1,0 +1,95 @@
+<% layout('layouts/boilerplate') -%>
+
+<section class="container">
+
+
+  <%- include('../partials/flash')  %> 
+  
+  <section id="heading"> 
+    <h4 class="display-4"><i class="fab fa-shopify" style="margin-right: 20px;"></i>Shopping-Cart</h4>
+  </section>
+
+  <% if (topCategories.length) { %>
+    <div class="card shadow-sm p-3 rounded-4 mb-4">
+      <h4 class="mb-3">Top Categories You Like 💖</h4>
+      <div class="d-flex flex-wrap gap-2">
+        <% topCategories.forEach(cat => { %>
+          <a href="/products?category=<%= cat.name %>" class="text-decoration-none">
+            <span class="badge bg-info text-dark fs-6 px-3 py-2 rounded-pill">
+              <%= cat.name %> <span class="badge bg-light text-dark ms-2"><%= cat.count %></span>
+            </span>
+          </a>
+        <% }) %>
+      </div>
+    </div>
+  <% } else { %>
+    <p class="text-muted mb-4">Start browsing to see your favorite categories here!</p>
+  <% } %>
+  
+
+   <!-- <% if (typeof user !== 'undefined' && user && user.interests.length > 0) { %>
+    <h2>Top Categories You Like</h2>
+    <div class="category-container">
+        <% user.interests.forEach(category => { %>
+            <a href="/products?category=<%= category %>" class="category-badge"><%= category %></a>
+        <% }) %>
+    </div>
+<% } %> -->
+
+  <div class="row products">
+      <%for(let product of products){%>
+          <div class="col-lg-3 col-md-6 mb-3">
+              <div class="card shadow-sm mx-auto position-relative" style="width: 20rem;">
+                  <img src="<%=product.img%>" class="card-img-top" alt="item image">
+                  <span class="badge rounded-pill bg-light text-dark w-25 position-absolute translate-middle-y" style="top:41%;left:5%"><%=product.avgRating%>  &star; | <%=product.reviews.length%></span>
+                  <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-between align-items-center">
+                      <span><%= product.name %></span> 
+                      <span class="btn like-btn" product-id="<%=product._id%>">
+                        <% if(currentUser && currentUser.wishList.includes(product._id)){ %>
+                           <i class="fas fa-heart"></i>
+                          <% } else{ %>
+                            <i class="far fa-heart"></i>
+                        <% } %>
+                      </span>
+                    </h5>
+                    <p class="card-text fw-light"><%= product.desc%></p>
+                    <% if(product.reviews.length){ %>
+                      <p class="text-muted"><%=product.reviews.length%> reviews</p>
+                    <%}else{%>
+                      <p class="text-muted">No reviews</p>
+                    <% } %> 
+                    <h6 class="card-title"><span class="fw-lighter fs-6 text-decoration-line-through">Rs.<%= product.price*2 %></span> Rs.<%= product.price %> <span class="fw-light fs-6 text-warning">( 50 % OFF )</span> </h6>
+                    <a href="/products/<%=product._id%>" class="btn btn-sm show-btn">View Now</a>
+                  </div>
+              </div>
+          </div>
+      <%}%>
+  </div>
+</section>
+
+<style>
+  .category-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.category-badge {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.category-badge:hover {
+    background-color: #0056b3;
+}
+.category-badge:active {
+    background-color: #003d80;
+}
+</style>
+
+<script src="/js/common.js"></script>
