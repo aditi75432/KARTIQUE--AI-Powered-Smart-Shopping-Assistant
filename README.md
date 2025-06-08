@@ -1,4 +1,4 @@
-# 💼 KARTIQUE – AI-Powered Smart Shopping Platform
+# 💼 Kartique – AI-Powered Smart Shopping Platform
 
 > ⚡ Revolutionizing personalized e-commerce experiences with AI, AR/VR, and intelligent multi-agent systems.
 
