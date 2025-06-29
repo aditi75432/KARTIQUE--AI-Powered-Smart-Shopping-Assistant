@@ -1,13 +1,11 @@
 # 💼 Kartique – AI-Powered Smart Shopping Platform
 
-> ⚡ Revolutionizing personalized e-commerce experiences with AI, AR/VR, and intelligent multi-agent systems.
+> ⚡ Revolutionizing personalized e-commerce experiences with AI and intelligent multi-agent systems.
 
 
 https://github.com/user-attachments/assets/b5806870-16dc-44dd-a816-c33e7098cb6b
 
-
-
-![Screenshot 2025-04-06 152655](https://github.com/user-attachments/assets/26ec0418-7c45-4a3e-9530-2d12184ab906)
+<img src="https://github.com/user-attachments/assets/26ec0418-7c45-4a3e-9530-2d12184ab906" alt="Screenshot" width="200"/>
 
 
 ---
@@ -16,13 +14,11 @@ https://github.com/user-attachments/assets/b5806870-16dc-44dd-a816-c33e7098cb6b
 
 **KARTIQUE** is a next-gen AI-powered smart shopping ecosystem that provides:
 - Hyper-personalized product recommendations
-- Voice-enabled intelligent chatbot support
-- AR-based virtual try-on
-- Smart dynamic discounts
-- Real-time competitor-aware pricing
-- Inventory prediction and fraud prevention
+- Visual Search
+- Frictionaless checkout with stripe
+- Product Filtering and recommendations based on user history and browsing
 
-We combine the power of **AI**, **Ollama-based on-prem LLMs**, **AR/VR**, and a **multi-agent system** to deliver a futuristic, scalable, and impactful e-commerce experience.
+We combine the power of **AI**, **Ollama-based on-prem LLMs** and a **multi-agent system** to deliver a futuristic, scalable, and impactful e-commerce experience.
 
 ---
 
